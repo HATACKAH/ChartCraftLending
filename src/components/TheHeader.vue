@@ -15,9 +15,8 @@ const scrollToTop = () => {
       <div class="hidden md:flex items-center space-x-8">
         <a href="#features" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">{{ t('navFeatures') }}</a>
         <a href="#how-it-works" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">{{ t('navHowItWorks') }}</a>
-        <a href="#pricing" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">{{ t('navPricing') }}</a>
-        <a href="#faq" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">{{ t('navFaq') }}</a>
         <a href="#testimonials" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">{{ t('navTestimonials') }}</a>
+        <a href="#faq" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">{{ t('navFaq') }}</a>
       </div>
       <div class="flex items-center space-x-4">
         <a href="#cta" class="hidden sm:block px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">

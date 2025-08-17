@@ -3,22 +3,22 @@ const { t } = useI18n()
 
 const testimonials = [
   {
-    name: 'Anna Korenina',
-    role: 'Chief Marketing, EdTech',
+    name: 'Sarah Mitchell',
+    role: 'Marketing Director, TechCorp',
     textKey: 'testi1',
-    avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=AK'
+    avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=SM'
   },
   {
-    name: 'Igor Smirnov',
-    role: 'Product Anal',
+    name: 'James Richardson',
+    role: 'Product Manager, DataFlow',
     textKey: 'testi2',
-    avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=IS'
+    avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=JR'
   },
   {
-    name: 'Jack Daniels',
-    role: 'Freelancer',
+    name: 'Emma Thompson',
+    role: 'Business Analyst, FinanceHub',
     textKey: 'testi3',
-    avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=SP'
+    avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=ET'
   }
 ]
 </script>

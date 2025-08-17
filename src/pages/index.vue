@@ -6,7 +6,6 @@
     <LandingHowItWorksSection />
     <LandingProductShowcaseSection />
     <LandingTestimonialsSection />
-    <LandingPricingSection />
     <LandingFAQSection />
     <LandingFinalCTASection />
   </main>

@@ -57,9 +57,9 @@ export default defineI18nConfig(() => ({
       // Testimonials
       testimonialsTitle: 'Loved by analysts, marketers and founders',
       testimonialsSubtitle: 'Join thousands of professionals turning messy data into charts that convince.',
-      testi1: '“I built better charts in 3 minutes than I used to in an afternoon. Absolute game-changer.”',
-      testi2: '“The suggestions are spot on. I finally stopped guessing which chart to use.”',
-      testi3: '“Exported SVG looks crisp everywhere. My editor is thrilled.”',
+      testi1: '"Our quarterly reports went from boring spreadsheets to compelling visual stories. The automatic chart suggestions saved our team weeks of design work."',
+      testi2: '"As a product manager, I need charts that tell a clear story to stakeholders. ChartCraft delivers every time - the right chart type, perfect formatting, zero hassle."',
+      testi3: '"Finally, financial data that executives actually want to look at. The export quality is flawless and our presentations have never looked more professional."',
 
       // Pricing
       pricingTitle: 'Simple, transparent pricing',
@@ -84,90 +84,6 @@ export default defineI18nConfig(() => ({
       finalCtaSubtitle: 'Join the waitlist to get early access and exclusive launch perks.',
       finalCtaButton: 'Join the waitlist',
       finalCtaPrivacy: 'We respect your inbox. No spam, unsubscribe anytime.',
-    },
-    ru: {
-      tagline: 'От сырых данных к впечатляющим графикам. Мгновенно.',
-      heroTitle: 'Хватит бороться с таблицами. Создавайте профессиональные графики без лишних усилий.',
-      heroSubtitle: 'Вставьте данные, опишите ваше видение, и наш умный алгоритм возьмет на себя сложную работу по форматированию. Получите идеальный график за секунды.',
-      heroCta: 'Попасть в список ожидания',
-
-      // Features Section
-      featuresTitle: 'Почему вам понравится ChartCraft',
-      feature1Title: 'Умный подбор графика',
-      feature1Desc: 'Наш алгоритм анализирует ваши данные и предлагает наиболее подходящий тип графика, от простых столбчатых диаграмм до сложных тепловых карт.',
-      feature2Title: 'Кастомизация без усилий',
-      feature2Desc: 'Настраивайте цвета, шрифты и подписи в интуитивно понятном редакторе. Никаких сложных меню — только простые элементы управления.',
-      feature3Title: 'Экспорт куда угодно',
-      feature3Desc: 'Получите готовую конфигурацию графика для использования в любом проекте, презентации или документе.',
-
-      // How it works Section
-      howItWorksTitle: 'Как это работает: 3 простых шага',
-      step1Title: '1. Вставьте данные',
-      step1Desc: 'Просто скопируйте и вставьте ваши сырые данные из любого источника. Предварительное форматирование не требуется.',
-      step2Title: '2. Опишите идею',
-      step2Desc: 'Расскажите, что вы хотите показать. Например, «круговая диаграмма продаж по регионам».',
-      step3Title: '3. Получите график',
-      step3Desc: 'Получите готовую конфигурацию графика за секунды. Её можно использовать где угодно.',
-
-      // Navigation
-      navFeatures: 'Фичи',
-      navHowItWorks: 'Как это работает',
-      navWaitlist: 'Список ожидания',
-      navPricing: 'Цены',
-      navFaq: 'FAQ',
-      navTestimonials: 'Отзывы',
-
-      // FAQ Section
-      faqTitle: 'Часто задаваемые вопросы',
-      faq1Question: 'Какие данные я могу использовать?',
-      faq1Answer: 'Вы можете вставлять данные практически из любого источника: таблицы (Excel, Google Sheets), CSV-файлы или просто текст. Наш алгоритм достаточно умен, чтобы понять структуру.',
-      faq2Question: 'Мне нужны навыки дизайна?',
-      faq2Answer: 'Вовсе нет. ChartCraft выступит в роли вашего личного дизайнера, предлагая эффективные макеты и красивые цветовые палитры. Вы получаете профессиональный результат без лишних раздумий.',
-      faq3Question: 'В какие форматы можно экспортировать?',
-      faq3Answer: 'Вы можете мгновенно экспортировать ваши графики в виде высококачественных файлов SVG или PNG, которые готовы для вставки в ваши рассылки, презентации или статьи.',
-
-      // Showcase Section (New texts for Before/After)
-      showcaseTitle: 'От хаоса в данных к шедевру',
-      showcaseSubtitle: 'Хватит позволять скучным визуализациям убивать ваши идеи. Посмотрите, как ChartCraft превращает сырые цифры в графики, которые приковывают внимание.',
-      showcaseBefore: 'До',
-      showcaseAfter: 'После',
-
-      // Showcase insights
-      showcaseInsightTitle1: 'Инсайт',
-      showcaseInsight1: 'Регион East лидирует по продажам за январь 2024.',
-      showcaseInsightTitle2: 'Действие',
-      showcaseInsight2: 'Усильте маркетинг в регионе East в Q1.',
-
-      // Testimonials
-      testimonialsTitle: 'Нас любят аналитики, маркетологи и фаундеры',
-      testimonialsSubtitle: 'Присоединяйтесь к тысячам профессионалов, которые превращают хаос данных в убедительные графики.',
-      testi1: '«Я делаю лучшее качество за 3 минуты, чем раньше за полдня. Это магия.»',
-      testi2: '«Рекомендации точные. Наконец-то я перестал гадать, какой график выбрать.»',
-      testi3: '«Экспорт SVG выглядит идеально везде. Редактор в восторге.»',
-
-      // Pricing
-      pricingTitle: 'Простые и прозрачные цены',
-      pricingSubtitle: 'Начните бесплатно. Обновитесь, когда понадобится больше возможностей.',
-      pricingStarter: 'Старт',
-      pricingStarterDesc: 'Всё необходимое, если строите графики время от времени.',
-      pricingPro: 'Про',
-      pricingProDesc: 'Для специалистов, которые создают графики каждую неделю.',
-      pricingTeam: 'Команда',
-      pricingTeamDesc: 'Для команд, которые рассказывают истории с данными.',
-      pricingPerMonth: 'мес',
-      pricingFeat1: 'Умные подсказки графиков',
-      pricingFeat2: 'Красивые темы и палитры',
-      pricingFeat3: 'Экспорт PNG и SVG',
-      pricingFeat4: 'История версий и пресеты',
-      pricingFeat5: 'Совместная работа и роли',
-      pricingCta: 'Начать',
-      popular: 'Хит',
-
-      // Final CTA
-      finalCtaTitle: 'Преобразуйте данные в графики, которые убеждают',
-      finalCtaSubtitle: 'Вступайте в лист ожидания, чтобы получить ранний доступ и бонусы к запуску.',
-      finalCtaButton: 'Записаться в лист ожидания',
-      finalCtaPrivacy: 'Мы уважаем вашу почту. Без спама, можно отписаться в любой момент.'
     }
   }
 }))
