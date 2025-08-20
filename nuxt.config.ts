@@ -26,7 +26,8 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    'nuxt-gtag'
   ],
 
   i18n: {
@@ -38,5 +39,10 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en',
     vueI18n: '~/i18n.config.ts'
-  }
+  },
+
+  // @ts-ignore
+  gtag: {
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
 })

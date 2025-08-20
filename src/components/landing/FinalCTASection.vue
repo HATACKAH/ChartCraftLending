@@ -52,13 +52,13 @@ const handleSubmit = async () => {
       <div v-if="isSuccess" class="mt-6 p-6 rounded-lg bg-green-500/20 border border-green-400/30 backdrop-blur-sm">
         <div class="text-center">
           <div class="text-4xl mb-3">🎉</div>
-          <h3 class="text-green-100 font-bold text-lg mb-2">Welcome to the ChartCraft Waitlist!</h3>
-          <p class="text-green-200/90 text-sm mb-3">{{ subscriptionData?.message || 'Successfully subscribed!' }}</p>
+          <h3 class="text-green-100 font-bold text-lg mb-2">{{ t('waitlistWelcome') }}</h3>
+          <p class="text-green-200/90 text-sm mb-3">{{ subscriptionData?.message || t('subscribeSuccess') }}</p>
 
           <div v-if="subscriptionData?.emailId" class="bg-green-600/20 rounded-lg p-3 mb-3">
             <p class="text-green-100 text-sm flex items-center justify-center gap-2">
               <span>📧</span>
-              <span>Welcome email sent! Check your inbox.</span>
+              <span>{{ t('emailSent') }}</span>
             </p>
           </div>
 
@@ -70,7 +70,7 @@ const handleSubmit = async () => {
           </div>
 
           <p class="text-green-200/80 text-xs">
-            Get ready for exclusive updates, early access, and launch notifications!
+            {{ t('exclusiveUpdates') }}
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ const handleSubmit = async () => {
           <span v-if="!isLoading">{{ t('finalCtaButton') }}</span>
           <div v-else class="flex items-center gap-2">
             <div class="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-            <span>Joining...</span>
+            <span>{{ t('joining') }}</span>
           </div>
         </button>
       </form>

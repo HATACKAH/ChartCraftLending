@@ -84,6 +84,17 @@ export default defineI18nConfig(() => ({
       finalCtaSubtitle: 'Join the waitlist to get early access and exclusive launch perks.',
       finalCtaButton: 'Join the waitlist',
       finalCtaPrivacy: 'We respect your inbox. No spam, unsubscribe anytime.',
+
+      // Success messages
+      waitlistWelcome: 'Welcome to the ChartCraft Waitlist!',
+      subscribeSuccess: 'Successfully subscribed!',
+      emailSent: 'Welcome email sent! Check your inbox.',
+      joining: 'Joining...',
+      exclusiveUpdates: 'Get ready for exclusive updates, early access, and launch notifications!',
+
+      // Footer
+      footerFeatures: 'Features',
+      footerFaq: 'FAQ',
     }
   }
 }))
