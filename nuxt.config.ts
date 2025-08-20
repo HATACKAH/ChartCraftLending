@@ -40,7 +40,11 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     vueI18n: '~/i18n.config.ts'
   },
-
+  runtimeConfig: {
+    resendApiKey: process.env.RESEND_API_KEY,
+    resendAudienceId: process.env.RESEND_AUDIENCE_ID,
+    resendDomain: process.env.RESEND_DOMAIN
+  },
   // @ts-ignore
   gtag: {
     id: process.env.GOOGLE_ANALYTICS_ID
