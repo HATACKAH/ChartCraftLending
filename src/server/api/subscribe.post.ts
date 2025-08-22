@@ -4,6 +4,10 @@ import { getWelcomeEmailHtml } from '../utils/email-template';
 export default defineEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig()
+
+        console.log('📧 RESEND_API_KEY status:', config.resendApiKey ? 'SET' : 'NOT SET');
+        console.log('🔑 RESEND_DOMAIN status:', config.resendDomain ? 'SET' : 'NOT SET');
+
         const resend = new Resend(config.resendApiKey);
 
         const body = await readBody(event)
@@ -16,7 +20,6 @@ export default defineEventHandler(async (event) => {
             })
         }
 
-        // Валидация email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         if (!emailRegex.test(email)) {
             throw createError({
@@ -25,9 +28,8 @@ export default defineEventHandler(async (event) => {
             })
         }
 
-        const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID || '10e7b202-0604-459a-a7e9-0abaadd10e98'
+        const AUDIENCE_ID = config.resendAudienceId || '10e7b202-0604-459a-a7e9-0abaadd10e98'
 
-        // Добавление контакта в аудиторию
         try {
             await resend.contacts.create({
                 email: email,
@@ -36,14 +38,14 @@ export default defineEventHandler(async (event) => {
                 unsubscribed: false,
                 audienceId: AUDIENCE_ID
             })
+            console.log('✅ Contact added to audience successfully');
         } catch (audienceError) {
             console.error('❌ Ошибка добавления в аудиторию:', audienceError)
         }
 
-        // Отправка welcome письма
         try {
-            const fromEmail = process.env.RESEND_DOMAIN
-                ? `ChartCraft <noreply@${process.env.RESEND_DOMAIN}>`
+            const fromEmail = config.resendDomain
+                ? `ChartCraft <noreply@${config.resendDomain}>`
                 : 'ChartCraft <onboarding@resend.dev>';
 
             const emailData = await resend.emails.send({
@@ -64,9 +66,7 @@ export default defineEventHandler(async (event) => {
             }
 
         } catch (emailError) {
-            console.error('❌ Failed to send welcome email:', emailError)
 
-            // Даже если письмо не отправилось, считаем подписку успешной
             return {
                 success: true,
                 message: 'Successfully subscribed to waitlist!',
@@ -78,7 +78,7 @@ export default defineEventHandler(async (event) => {
         }
 
     } catch (error) {
-        console.error('Subscription error:', error)
+        console.error('💥 Subscription error:', error)
 
         if (error instanceof Error && 'statusCode' in error) {
             throw error
